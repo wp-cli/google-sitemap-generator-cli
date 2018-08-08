@@ -7,7 +7,27 @@
         "role": "Developer"
     }],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.4",
+        "wp-cli/wp-cli": "^2"
+    },
+    "require-dev": {
+        "wp-cli/wp-cli-tests":"^2",
+        "wp-cli/extension-command": "^2"
+    },
+    "minimum-stability": "dev",
+    "prefere-stable": true,
+    "scripts": {
+      "lint": "run-linter-tests",
+      "phpcs": "run-phpcs-tests",
+      "phpunit": "run-php-unit-tests",
+      "behat": "run-behat-tests",
+      "prepare-tests": "install-package-tests",
+      "test": [
+          "@lint",
+          "@phpcs",
+          "@phpunit",
+          "@behat"
+      ]
     },
     "autoload": {
         "files": [ "sitemap-cli.php" ]

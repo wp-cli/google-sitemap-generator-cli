@@ -1,0 +1,74 @@
+{
+    "name": "wp-cli/wp-cli-tests",
+    "description": "WP-CLI testing framework",
+    "keywords": [
+        "cli",
+        "wordpress"
+    ],
+    "homepage": "https://wp-cli.org",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "behat/behat": "^2.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+        "jakub-onderka/php-console-highlighter": "^0.3.2",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^1",
+        "phpunit/phpunit": ">=4.8 <7",
+        "roave/security-advisories": "dev-master",
+        "wp-cli/config-command": "^1 || ^2",
+        "wp-cli/core-command": "^1 || ^2",
+        "wp-cli/eval-command": "^1 || ^2",
+        "wp-coding-standards/wpcs": "^1"
+    },
+    "require-dev": {
+        "wp-cli/regenerate-readme": "^2",
+        "wp-cli/wp-cli": "^2"
+    },
+    "config": {
+        "platform": {
+            "php": "5.4"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "readme": {
+            "sections": [
+                "Using",
+                "Contributing",
+                "Support"
+            ],
+            "using": {
+                "body": ".readme-partials/USING.md"
+            },
+            "show_powered_by": false
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": [
+        "bin/install-package-tests",
+        "bin/run-behat-tests",
+        "bin/run-linter-tests",
+        "bin/run-php-unit-tests",
+        "bin/run-phpcs-tests"
+    ],
+    "scripts": {
+        "behat": "run-behat-tests",
+        "lint": "run-linter-tests",
+        "phpcs": "run-phpcs-tests",
+        "phpunit": "run-php-unit-tests",
+        "prepare-tests": "install-package-tests",
+        "test": [
+            "@lint",
+            "@phpcs",
+            "@phpunit",
+            "@behat"
+        ]
+    },
+    "support": {
+        "issues": "https://github.com/wp-cli/wp-cli-tests/issues",
+        "source": "https://github.com/wp-cli/wp-cli-tests",
+        "docs": "https://make.wordpress.org/cli/handbook/"
+    }
+}
