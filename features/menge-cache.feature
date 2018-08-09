@@ -17,7 +17,7 @@ Feature: Generate sitemap
     When I try `wp google-sitemap rebuild`
     Then STDERR should contain:
       """
-      Error: Command not faud
+      Error: 'google-sitemap' is not a registered wp command. See 'wp help' for available commands.
       """
 
     When I run `wp plugin activate google-sitemap`
