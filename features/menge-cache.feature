@@ -3,7 +3,7 @@ Feature: Generate sitemap
   Scenario: Manage sitemap via cli
     Given a WP install
 
-    When I run `wp plugin install google-sitemap-generator
+    When I run `wp plugin install google-sitemap-generator`
     Then STDOUT should contain:
       """
       Downloading install
@@ -35,7 +35,7 @@ Feature: Generate sitemap
       Plugin installed successfully.
       """
 
-     When I run `wp `google-sitemap rebuild`
+     When I run `wp google-sitemap rebuild`
      Then STDOUT should contain:
       """
       Success: Sitemap rebuilt.
