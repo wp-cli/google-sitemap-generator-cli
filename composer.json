@@ -1,6 +1,7 @@
 {
     "name": "wp-cli/google-sitemap-generator-cli",
     "license": "MIT",
+    "description": "WP-CLI commend for google sitemap generator WordPress plugin",
     "authors": [{
         "name": "WP-CLI Team",
         "homepage": "http://github.com/wp-cli",
@@ -15,7 +16,7 @@
         "wp-cli/extension-command": "^2"
     },
     "minimum-stability": "dev",
-    "prefere-stable": true,
+    "prefer-stable": true,
     "scripts": {
       "lint": "run-linter-tests",
       "phpcs": "run-phpcs-tests",
