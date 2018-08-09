@@ -19,9 +19,6 @@ Feature: Generate sitemap
       """
       Error: Command not faud
       """
-    And the wp-content/plugins/one-time-login directory should exist
-    And the wp-content/plugins/one-time-login-master directory should not exist
-    And the return code should be 1
 
     When I run `wp plugin activate google-sitemap`
     Then STDOUT should contain:
@@ -29,7 +26,7 @@ Feature: Generate sitemap
       Plugin activated successfully.
       """
 
-    When I run `wp plugin install https://github.com/wp-cli/google-sitemap-generator-cli.git --activate`
+    When I run `wp plugin install https://github.com/wojsmol/google-sitemap-generator-cli/archive/test.zip --activate`
     Then STDOUT should contain:
       """
       Plugin installed successfully.
