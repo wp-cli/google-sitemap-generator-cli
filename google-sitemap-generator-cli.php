@@ -10,11 +10,12 @@ License: MIT
 */
 
 function google_sitemap_generator_cli_init() {
-	if ( !class_exists( 'GoogleSitemapGeneratorLoader' ) )
+	if ( ! class_exists( 'GoogleSitemapGeneratorLoader' ) ) {
 		return;
+	}
 
-	if ( defined('WP_CLI') && WP_CLI ) {
-		include dirname(__FILE__) . '/sitemap-cli.php';
+	if ( defined( 'WP_CLI' ) && WP_CLI ) {
+		include dirname( __FILE__ ) . '/sitemap-cli.php';
 	}
 }
 add_action( 'plugins_loaded', 'google_sitemap_generator_cli_init' );
