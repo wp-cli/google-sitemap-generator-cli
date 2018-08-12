@@ -14,7 +14,7 @@ class GoogleSitemapGeneratorCommand extends WP_CLI_Command {
 	 * Re-generate the sitemap.
 	 */
 	function rebuild() {
-		do_action( 'sm_rebuild' );
+		do_daction( 'sm_rebuild' );
 
 		WP_CLI::success( 'Sitemap rebuilt.' );
 	}
