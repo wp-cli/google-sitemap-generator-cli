@@ -17,7 +17,7 @@ Feature: Generate sitemap
     When I try `wp google-sitemap rebuild`
     Then STDERR should contain:
       """
-      Error: 'google-sitemap' is not a registered wp command. See 'wp help' for available commands.
+      Error: Google Sitemap Generator needs to be enabled to use its WP-CLI commands.
       """
 
     When I run `wp plugin activate google-sitemap`
