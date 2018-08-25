@@ -20,7 +20,7 @@ Feature: Generate sitemap
       Error: Google Sitemap Generator needs to be enabled to use its WP-CLI commands.
       """
 
-    When I run `wp plugin activate google-sitemap`
+    When I run `wp plugin activate google-sitemap-generator`
     And I run `wp google-sitemap rebuild`
     Then STDOUT should contain:
       """
