@@ -1,12 +1,14 @@
 {
     "name": "wp-cli/google-sitemap-generator-cli",
-    "license": "MIT",
     "description": "WP-CLI commend for google sitemap generator WordPress plugin",
-    "authors": [{
-        "name": "WP-CLI Team",
-        "homepage": "http://github.com/wp-cli",
-        "role": "Developer"
-    }],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WP-CLI Team",
+            "homepage": "http://github.com/wp-cli",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "wp-cli/wp-cli": "^2",
@@ -15,28 +17,28 @@
     "require-dev": {
         "wp-cli/extension-command": "^2"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-      "lint": "run-linter-tests",
-      "phpcs": "run-phpcs-tests",
-      "phpunit": "run-php-unit-tests",
-      "behat": "run-behat-tests",
-      "behat-rerun": "rerun-behat-tests",
-      "prepare-tests": "install-package-tests",
-      "test": [
-          "@lint",
-          "@phpcs",
-          "@phpunit",
-          "@behat"
-      ]
-    },
     "autoload": {
-       "psr-4": {
+        "psr-4": {
             "": "src/"
         },
         "files": [
-           "google-sitemap-generator-cli.php" 
+            "google-sitemap-generator-cli.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "behat": "run-behat-tests",
+        "behat-rerun": "rerun-behat-tests",
+        "lint": "run-linter-tests",
+        "phpcs": "run-phpcs-tests",
+        "phpunit": "run-php-unit-tests",
+        "prepare-tests": "install-package-tests",
+        "test": [
+            "@lint",
+            "@phpcs",
+            "@phpunit",
+            "@behat"
         ]
     }
 }
