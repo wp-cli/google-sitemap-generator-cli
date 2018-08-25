@@ -1,2 +1,2 @@
 require:
-- google-sitemap-generator-cli.php
+  - google-sitemap-generator-cli.php
