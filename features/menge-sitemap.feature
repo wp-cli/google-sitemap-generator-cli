@@ -21,13 +21,8 @@ Feature: Generate sitemap
       """
 
     When I run `wp plugin activate google-sitemap`
+    And I run `wp google-sitemap rebuild`
     Then STDOUT should contain:
-      """
-      Plugin activated successfully.
-      """
-
-     When I run `wp google-sitemap rebuild`
-     Then STDOUT should contain:
       """
       Success: Sitemap rebuilt.
       """
