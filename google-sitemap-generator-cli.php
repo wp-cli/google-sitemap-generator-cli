@@ -10,7 +10,7 @@ if ( file_exists( $autoload ) ) {
 WP_CLI::add_command(
 	'google-sitemap', 'Google_Sitemap_Generator_Command', array(
 		'before_invoke' => function() {
-			if ( ! function_exists( 'GoogleSitemapGeneratorLoader' ) ) {
+			if ( ! class_exists( 'GoogleSitemapGeneratorLoader' ) ) {
 				WP_CLI::error( 'Google Sitemap Generator needs to be enabled to use its WP-CLI commands.' );
 			}
 		},
