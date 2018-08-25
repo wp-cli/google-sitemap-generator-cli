@@ -1,6 +1,6 @@
 Feature: Generate sitemap
 
-  Scenario: Manage sitemap via cli
+  Scenario: Manage sitemap via CLI
     Given a WP install
 
     When I run `wp plugin install google-sitemap-generator`
@@ -24,12 +24,6 @@ Feature: Generate sitemap
     Then STDOUT should contain:
       """
       Plugin activated successfully.
-      """
-
-    When I run `wp plugin install https://github.com/wojsmol/google-sitemap-generator-cli/archive/test.zip --activate`
-    Then STDOUT should contain:
-      """
-      Plugin installed successfully.
       """
 
      When I run `wp google-sitemap rebuild`
