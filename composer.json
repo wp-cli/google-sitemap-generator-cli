@@ -9,10 +9,10 @@
     }],
     "require": {
         "php": ">=5.4",
-        "wp-cli/wp-cli": "^2"
+        "wp-cli/wp-cli": "^2",
+        "wp-cli/wp-cli-tests": "^2.0.7"
     },
     "require-dev": {
-        "wp-cli/wp-cli-tests":"^2",
         "wp-cli/extension-command": "^2"
     },
     "minimum-stability": "dev",
@@ -22,6 +22,7 @@
       "phpcs": "run-phpcs-tests",
       "phpunit": "run-php-unit-tests",
       "behat": "run-behat-tests",
+      "behat-rerun": "rerun-behat-tests",
       "prepare-tests": "install-package-tests",
       "test": [
           "@lint",
