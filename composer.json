@@ -11,11 +11,11 @@
     ],
     "require": {
         "php": ">=5.4",
-        "wp-cli/wp-cli": "^2"
+        "wp-cli/wp-cli": "^2 || ^3"
     },
     "require-dev": {
-        "wp-cli/extension-command": "^2",
-        "wp-cli/wp-cli-tests": "^4.3.4"
+        "wp-cli/extension-command": "^2 || ^3",
+        "wp-cli/wp-cli-tests": "^4.3.4 || ^5"
     },
     "autoload": {
         "psr-4": {
@@ -40,5 +40,11 @@
             "@phpunit",
             "@behat"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
     }
 }

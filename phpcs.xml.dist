@@ -2,13 +2,13 @@
 <ruleset name="WP-CLI">
 	<description>Custom ruleset for WP-CLI</description>
 
-	<!-- For help in understanding this file: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
-	<!-- For help in using PHPCS: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
+	<!-- For help in understanding this file: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+	<!-- For help in using PHPCS: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Usage -->
 
 	<!-- What to scan -->
 	<file>.</file>
 	<!-- Ignoring Files and Folders:
-		https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders -->
+		https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders -->
 	<exclude-pattern>*/.git/*</exclude-pattern>
 	<exclude-pattern>*/ci/*</exclude-pattern>
 	<exclude-pattern>*/features/*</exclude-pattern>
