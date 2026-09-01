@@ -31,11 +31,13 @@
         "behat": "run-behat-tests",
         "behat-rerun": "rerun-behat-tests",
         "lint": "run-linter-tests",
+        "lint-gherkin": "run-gherkin-lint-tests",
         "phpcs": "run-phpcs-tests",
         "phpunit": "run-php-unit-tests",
         "prepare-tests": "install-package-tests",
         "test": [
             "@lint",
+            "@lint-gherkin",
             "@phpcs",
             "@phpunit",
             "@behat"
